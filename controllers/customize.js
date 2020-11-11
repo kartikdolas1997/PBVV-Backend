@@ -8,14 +8,18 @@ async function submit_candi(req, res) {
   let house = "red";
 
   let query =
-    "INSERT INTO abc.new_table (house,gender_id,names) VALUES (?,?,?)";
+    // "INSERT INTO abc.new_table (house,gender_id,names) VALUES (?,?,?)";
+    "UPDATE abc.new_table SET names = ? WHERE id = ?;"
   girls.forEach((girl) => {
-    config.query(query, [house, "female", girl], function (err, rows, fields) {
+    ID = girls.indexOf(girl)+1;
+    console.log('ID '+ID+'  '+'girl '+girl);
+    config.query(query, [girl,ID] , function (err, rows, fields) {
       console.log({ err, rows, fields });
     });
   });
   boys.forEach((boy) => {
-    config.query(query, [house, "male", boy], function (err, rows, fields) {
+    ID = boys.indexOf(boy)+1;
+    config.query(query, [boy,ID], function (err, rows, fields) {
       console.log({ err, rows, fields });
     });
   });

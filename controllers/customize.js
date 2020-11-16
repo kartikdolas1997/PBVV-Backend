@@ -11,7 +11,7 @@ async function submit_candi(req, res) {
     // "INSERT INTO abc.new_table (house,gender_id,names) VALUES (?,?,?)";
     "UPDATE abc.new_table SET names = ? WHERE id = ?;"
   girls.forEach((girl) => {
-    ID = girls.indexOf(girl)+1;
+    ID = girls.indexOf(girl)+5;
     console.log('ID '+ID+'  '+'girl '+girl);
     config.query(query, [girl,ID] , function (err, rows, fields) {
       console.log({ err, rows, fields });
@@ -19,6 +19,7 @@ async function submit_candi(req, res) {
   });
   boys.forEach((boy) => {
     ID = boys.indexOf(boy)+1;
+    console.log('ID '+ID+'  '+'boy '+boy);
     config.query(query, [boy,ID], function (err, rows, fields) {
       console.log({ err, rows, fields });
     });

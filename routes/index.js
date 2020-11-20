@@ -2,11 +2,7 @@ let router = require('express').Router()
 
 
 router.use('/customize', require('./customize'))
-
-// router.use('/api/users', require('./user'))
-// router.use('/api/utils', require('./util'))
-
-// Controllers
+router.use('/results', require('./results'))
 router.get('/api', (req, res) => {
   res.send('Please read documentation for the API.')
 })

@@ -1,4 +1,4 @@
-const config = require("../models/customize");
+const config = require("../models/config");
 
 async function submit_candi(req, res) {
     console.log(req.body);

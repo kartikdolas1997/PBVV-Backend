@@ -1,4 +1,4 @@
-const config = require("../models/customize");
+const config = require("../models/config");
 
 async function function_name(req, res) {
   // const { G1, G2, G3, G4, B1, B2, B3, B4 } = req.body;
@@ -16,7 +16,7 @@ async function function_name(req, res) {
     "';";
 
   config.query(query, function (err, rows, fields) {
-    // console.log({ err, rows, fields });
+    console.log({ err, rows, fields });
     console.log(rows);
     res.send(rows);
   });

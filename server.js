@@ -13,9 +13,6 @@ app.use(express.urlencoded({extended:true}))
 app.use(express.json())
 app.use("/api", require("./routes"));
 
-// app.get("/", (req,res)=>{
-//   res.send("krushn")
-// })
 
 app.listen(PORT, () => {
   console.log("Listening on Port", PORT);

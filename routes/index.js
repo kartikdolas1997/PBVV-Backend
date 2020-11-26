@@ -4,6 +4,7 @@ let router = require('express').Router()
 router.use('/customize', require('./customize'))
 router.use('/results', require('./results'))
 router.use('/submitevote', require('./submitvote'))
+router.use('/reset', require('./reset'))
 
 
 router.get('/', (req, res) => {

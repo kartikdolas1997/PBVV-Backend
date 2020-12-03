@@ -1,9 +1,9 @@
-const mysql = require("mysql");
+// const mysql = require("mysql");
 const express = require("express");
 const cors = require("cors");
 
-const http = require("http");
-const { json } = require("body-parser");
+// const http = require("http");
+// const { json } = require("body-parser");
 require("dotenv").config();
 const PORT = process.env.PORT || 3000;
 

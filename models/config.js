@@ -3,8 +3,8 @@ const mysql = require("mysql");
 // Kartik credentials
 var config = mysql.createConnection({
   host: "localhost",
-  user: "newuser",
-  password: "user_password",
+  user: "root",
+  password: "goodness",
   database: "abc",
 });
 

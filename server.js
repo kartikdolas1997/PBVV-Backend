@@ -12,9 +12,9 @@ app.use(cors());
 app.use(express.urlencoded({extended:true}))
 app.use(express.json())
 app.use("/api", require("./routes"));
-// app.get('/',(req,res)=>{
-//   res.send('Welcome to pbvv backend');
-// })
+app.get('/',(req,res)=>{
+  res.send('Welcome to pbvv backend');
+})
 
 app.listen(PORT, () => {
   console.log("Listening on Port", PORT);

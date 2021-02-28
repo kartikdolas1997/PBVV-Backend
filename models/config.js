@@ -6,12 +6,12 @@ if(process.env.JAWSDB_URL){
 
 } else {
 
-  // var config = mysql.createConnection({
-  //   host: "localhost",
-  //   user: "root",
-  //   password: "goodness",
-  //   database: "abc",
-  // });
+  var config = mysql.createConnection({
+    host: "localhost",
+    user: "root",
+    password: "goodness",
+    database: "abc",
+  });
 }
 
 

@@ -2,9 +2,12 @@ const mysql = require("mysql");
 
 // Kartik credentials
 if(process.env.JAWSDB_URL){
+  console.log("connected to jaws db");
   var config = mysql.createConnection(process.env.JAWSDB_URL);
 
 } else {
+  console.log("connected to local sql db");
+
 
   var config = mysql.createConnection({
     host: "localhost",

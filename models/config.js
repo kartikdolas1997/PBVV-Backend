@@ -10,11 +10,14 @@ const mysql = require("mysql");
 
 
   var config = mysql.createConnection({
-    host: process.env.MYSQL_HOST,
-    user: process.env.MYSQL_USERNAME,
-    password: process.env.MYSQL_PASSWORD,
-    database: process.env.MYSQL_DATABASE,
-    port: process.env.MYSQL_PORT
+    host:"l0ebsc9jituxzmts.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    // host:"152.57.100.240",
+    port: 3306,
+    user: "pbf2gc5gxumgdgmd",
+    password: "e1y5a5eyr3d6wjrh",
+    database: "wyupwe9cl8igfjie",
+    insecureAuth : true,
+    dialect: "mysql"
   });
 
   // var config = mysql.createConnection({
@@ -23,6 +26,7 @@ const mysql = require("mysql");
   //   password: "goodness",
   //   database: "abc",
   // });
+  
 // }
 
 

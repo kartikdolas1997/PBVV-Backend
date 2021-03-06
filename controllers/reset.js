@@ -8,9 +8,9 @@ async function reset_count(req, res) {
 
   let { color, gender } = req.body;
   console.log(req.body);
-//   update abc.new_table set no_of_votes = 0 where house = 'green' and gender_id = 'male';
+//   update new_table set no_of_votes = 0 where house = 'green' and gender_id = 'male';
   let query =
-    "update abc.new_table set no_of_votes = 0 where house ='" +
+    "update new_table set no_of_votes = 0 where house ='" +
     color +
     "' AND gender_id='" +
     gender +

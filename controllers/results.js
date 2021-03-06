@@ -9,7 +9,7 @@ async function function_name(req, res) {
   let { house, gender } = req.params;
 
   let query =
-    "select names, no_of_votes from abc.new_table where house='" +
+    "select names, no_of_votes from new_table where house='" +
     house +
     "' AND gender_id='" +
     gender +

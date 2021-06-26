@@ -1,7 +1,9 @@
 const config = require("../models/config");
 
 async function submit_candi(req, res) {
-  console.log(req.body);
+
+  try{
+    console.log(req.body);
   const { G1, G2, G3, G4, B1, B2, B3, B4 } = req.body;
   let girls = [G1, G2, G3, G4];
   let boys = [B1, B2, B3, B4];
@@ -28,6 +30,10 @@ async function submit_candi(req, res) {
   });
 
   res.send({ success: true });
+  } catch(e){
+    console.error(e);
+  }
+  
 }
 
 async function submit_candi_yellow(req, res) {
